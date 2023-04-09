@@ -1,0 +1,189 @@
+:root{
+    --main-bg: hsl(233, 47%, 7%);
+    --card-bg: hsl(244, 38%, 16%);
+    --accent: hsl(277, 64%, 61%);
+    --main-heading: hsl(0, 0%, 100%);
+    --main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --stats-heading: hsla(0, 0%, 100%, 0.6);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--main-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+   position: relative;
+   background-color: var(--card-bg);
+   max-width: 60rem;
+   display: flex;
+   overflow: hidden;
+   border-radius: .5em;
+}
+
+.image{
+  z-index: 1;
+  position: relative;
+   
+}
+
+.image::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  background-color: hsl(277, 80%, 30%, 0.6); /*nilai Alpha 0.5 memberikan transparansi setengah*/
+  z-index: 2;
+  margin-left: 6.9rem;
+}
+
+.image img{
+    max-width: 80%;
+    display: block;
+    margin-left: 6.9rem;
+    z-index: -1;
+}
+
+.content{
+    width: 30rem;
+}
+
+.content h1{
+    padding: 1.5rem;
+    margin-top: 1.9rem;
+    margin-left: 2rem;
+    flex-grow: 1;
+    color: var(--main-heading);
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    
+}
+
+.content p{
+   color: var(--main-paragraph);
+   line-height: 1.7;
+   margin-left: 3.5rem;
+   font-weight: 400;
+   width: 18.5rem;
+   font-family: 'Inter', sans-serif;
+   font-size: .8em;
+}
+
+.content span{
+    color: var(--accent);
+}
+
+.bar-data span{
+   color: var(--main-heading);
+   font-weight: 700;
+   font-family: 'Inter', sans-serif;
+   font-size: 1.3rem;
+   margin-top: .5rem;
+}
+
+.bar-data li .user{
+    text-transform: lowercase;
+}
+
+ul{
+    margin-top: 2.5rem;
+    font-family: "Lexend Deca", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+    color: var(--stats-heading);
+    margin-left: 3.5rem;
+    margin-top: .5rem;
+    font-size: .7rem;
+    line-height: 1.5;
+}
+
+.attribution{ 
+   font-size: 1rem; 
+   margin-top: 30rem;
+   position: absolute;
+   color: var(--main-heading);
+}
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+     text-decoration: none;
+}
+
+
+  @media (max-width: 450px) {       /*Responsive 450px*/
+    .container {
+      max-width: 18rem;
+      flex-direction: column-reverse;
+      border-radius: 0.5rem;
+      display: flex;
+    }
+  
+    .image::after {
+      width: 100%;
+      height: 100%;
+      margin-left: 0;
+    }
+     .image{
+        height: 10%;
+     }
+    .image img {
+      max-width: 100%;
+      margin-left: 0;
+    }
+  
+    .content {
+      width: 90%;
+    }
+  
+    .content h1 {
+      margin-left: .1rem;
+      margin-top: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+      width: 18rem;
+    }
+  
+    .content p {
+      margin-left: 1rem;
+      margin-top: .2rem;
+      text-align: center;
+      width: 100%;
+      font-size: 0.9rem;
+    }
+  
+    .bar-data span {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+    }
+  
+    ul {
+      margin-top: .5rem;
+      text-align: center;
+      width: 14rem;
+    }
+  
+    li {
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    }
+
+    .attribution{
+      margin-top: 54rem;
+    }
+  }
+  
