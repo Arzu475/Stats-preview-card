@@ -23,7 +23,7 @@ body{
 .container{
    position: relative;
    background-color: var(--card-bg);
-   max-width: 60rem;
+   max-width: 65rem;
    display: flex;
    overflow: hidden;
    border-radius: .5em;
@@ -44,29 +44,28 @@ body{
   height: 100%;
   background-color: hsl(277, 80%, 30%, 0.6); /*nilai Alpha 0.5 memberikan transparansi setengah*/
   z-index: 2;
-  margin-left: 6.9rem;
+  margin-left: 8rem;
 }
 
 .image img{
     max-width: 80%;
     display: block;
-    margin-left: 6.9rem;
+    margin-left: 8rem;
     z-index: -1;
 }
 
 .content{
-    width: 30rem;
+    width: 28.3rem;
 }
 
 .content h1{
-    padding: 1.5rem;
+    padding: 1.8rem;
     margin-top: 1.9rem;
     margin-left: 2rem;
     flex-grow: 1;
     color: var(--main-heading);
     font-weight: 700;
     font-family: 'Inter', sans-serif;
-    
 }
 
 .content p{
@@ -96,7 +95,7 @@ body{
 }
 
 ul{
-    margin-top: 2.5rem;
+    margin-top: 3.4rem;
     font-family: "Lexend Deca", sans-serif;
     text-transform: uppercase;
     font-weight: 400;
